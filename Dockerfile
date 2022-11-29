@@ -9,7 +9,7 @@ COPY . .
 
 RUN go mod download
 RUN go mod verify
-RUN go build -o app
+RUN go build -o app main.go
 
 FROM registry.semaphoreci.com/golang:1.18
 COPY --from=builder /src/projects/app /bin/app
