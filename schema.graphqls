@@ -1,0 +1,18 @@
+scalar Long
+
+type ProximityEvent {
+  id: ID!
+  asteroid: Asteroid
+  missDistance: Long!
+  happenedAt: String!
+}
+
+type Asteroid {
+  id: ID!
+  nasaID: String!
+  name: String!
+}
+
+type Query {
+  closestAsteroids(from: String!, to: String!, amount: Int!): [ProximityEvent]
+}
