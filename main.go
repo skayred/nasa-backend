@@ -31,7 +31,7 @@ func main() {
 	}
 
 	router.Use(cors.Handler(cors.Options{
-		AllowedOrigins:   []string{"http://panim.one"},
+		AllowedOrigins:   []string{"http://panim.one", "http://localhost"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
 		ExposedHeaders:   []string{"Link"},
